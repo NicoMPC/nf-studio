@@ -143,7 +143,7 @@ main:focus { outline: none; }
 .menu-toggle[aria-expanded="true"] .menu-toggle-icon::before { transform: translateY(4.25px) rotate(45deg); }
 .menu-toggle[aria-expanded="true"] .menu-toggle-icon::after { transform: translateY(-4.25px) rotate(-45deg); }
 
-@media (max-width: 879px) {
+@media (max-width: 1079px) {
   .js .menu-toggle { display: inline-flex; }
   .site-nav { flex-direction: column; align-items: stretch; gap: 0; }
   .site-nav ul { flex-direction: column; gap: 0; }
@@ -175,7 +175,7 @@ main:focus { outline: none; }
 }
 .section {
   border-top: 1px solid var(--ink);
-  padding-block: clamp(56px, 7vw, 96px);
+  padding-block: clamp(56px, 6vw, 80px);
 }
 .section h2 { font-size: clamp(1.875rem, 4vw, 3.25rem); max-width: 20ch; }
 .section h2.h2-wide { max-width: 24ch; }
@@ -186,7 +186,7 @@ main:focus { outline: none; }
 .section-intro strong { color: var(--ink); }
 
 /* ---------- hero ---------- */
-.hero { padding-block: clamp(40px, 7vw, 96px) clamp(64px, 8vw, 112px); }
+.hero { padding-block: clamp(40px, 6vw, 80px) clamp(56px, 6vw, 72px); }
 .hero-grid { display: grid; gap: 48px; }
 @media (min-width: 1000px) {
   .hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: 64px; align-items: start; }
@@ -208,8 +208,12 @@ main:focus { outline: none; }
 .h1-line { display: block; color: var(--ink-2); }
 .lede { font-size: clamp(1.125rem, 1.6vw, 1.3125rem); line-height: 1.55; max-width: 34em; margin-top: 32px; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 36px; }
+.local-line { margin: 28px 0 0; font-family: var(--mono); font-size: 0.8125rem; letter-spacing: .02em; line-height: 1.5; }
+.local-line a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: .3em; padding: 6px 0; }
+.local-line a:hover { color: var(--accent-ink); text-decoration-color: var(--accent); }
+.local-mark { display: inline-block; width: 8px; height: 8px; margin-right: 10px; background: var(--accent); vertical-align: 1px; }
 .signature {
-  display: flex; align-items: center; gap: 12px; margin: 44px 0 0;
+  display: flex; align-items: center; gap: 12px; margin: 28px 0 0;
   font-family: var(--mono); font-size: 0.8125rem; color: var(--ink-2);
 }
 .signature-rule { width: 40px; height: 1px; background: var(--ink); }
@@ -222,7 +226,7 @@ main:focus { outline: none; }
   background-position: 8px 8px;
   border: 1px solid var(--rule);
 }
-.hero-figure { position: relative; padding: clamp(16px, 3vw, 32px) clamp(8px, 2vw, 24px) 0; }
+.hero-figure { position: relative; padding: clamp(16px, 2vw, 24px) clamp(8px, 2vw, 24px) 0; }
 @media (max-width: 999px) { .hero-figure { max-width: 520px; } }
 /* repères d'angle */
 .hero-figure::before, .hero-figure::after {
@@ -230,7 +234,7 @@ main:focus { outline: none; }
 }
 .hero-figure::before { top: -1px; left: -1px; border-width: 1px 0 0 1px; }
 .hero-figure::after { bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
-.flow-hero { position: relative; z-index: 1; width: 100%; max-width: 370px; margin-inline: auto; height: auto; }
+.flow-hero { position: relative; z-index: 1; width: 100%; max-width: 340px; margin-inline: auto; height: auto; }
 .hero-figure figcaption { position: relative; z-index: 1; }
 /* trame réactive au curseur (desktop, activée par anim.js) */
 .hero-dots { display: none; }
@@ -346,6 +350,25 @@ main:focus { outline: none; }
 .dash-list { list-style: none; margin-top: 20px; }
 .dash-list li { display: grid; grid-template-columns: 28px 1fr; padding: 8px 0; border-top: 1px solid var(--rule); font-size: 0.9375rem; line-height: 1.45; }
 .dash-list li::before { content: "—"; font-family: var(--mono); color: var(--ink-2); }
+
+/* ---------- 02 confidentialité ---------- */
+.section-conf { padding-block: clamp(48px, 5vw, 64px); }
+.conf { display: grid; gap: 32px; align-items: center; }
+@media (min-width: 900px) { .conf { grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: clamp(32px, 4vw, 56px); } }
+.conf-lede { margin: 20px 0 0; max-width: 36em; }
+.conf-points { margin-top: 18px; }
+.conf-points strong { font-weight: 600; }
+.conf-note { margin: 16px 0 0; font-size: 0.9375rem; color: var(--ink-2); max-width: 36em; }
+.conf-figure { margin: 0; }
+.flow-conf { width: 100%; max-width: 360px; height: auto; }
+.conf-figure figcaption { margin-top: 8px; font-size: 0.8125rem; color: var(--ink-2); }
+.cf-frame { fill: none; stroke: var(--ink-2); stroke-width: 1; stroke-dasharray: 5 4; }
+.cf-mac rect { stroke-width: 1.8; }
+.cf-cloud rect { fill: var(--paper-2); stroke: var(--ink-2); stroke-width: 1; }
+.flow .cf-cloud text { fill: var(--ink-2); text-anchor: middle; }
+.cf-link { fill: none; stroke: var(--ink-2); stroke-width: 1; stroke-dasharray: 3 3; }
+.cf-x { fill: none; stroke: var(--accent); stroke-width: 2.2; transform-box: fill-box; transform-origin: center; }
+.flow .fl-annot .cf-none { fill: var(--accent-ink); }
 
 /* ---------- 02 exemples par métier ---------- */
 .ex-before { position: relative; }

@@ -18,7 +18,7 @@
   "seo": {
     "home": {
       "title": "NF STUDIO — Logiciels métier sur mesure et automatisation",
-      "description": "Logiciels métier sur mesure et automatisation : un outil conçu pour votre activité, qui se déploie d’une agence à tout un réseau ou une franchise."
+      "description": "Logiciels métier sur mesure, automatisation et IA locale et confidentielle : un outil pensé pour votre activité, déployable d’une agence à tout un réseau."
     },
     "legal": {
       "title": "Mentions légales et données personnelles — NF STUDIO",
@@ -31,7 +31,9 @@
       "Déploiement multi-sites et réseaux de franchise",
       "Automatisation de processus métier",
       "Centralisation de l’information et synthèse de documents par l’IA",
-      "Connexion de logiciels (API) et intégration de l’IA"
+      "Connexion de logiciels (API) et intégration de l’IA",
+      "IA locale et confidentielle, installée chez le client",
+      "Analyse des avis clients et tableaux de bord réseau"
     ],
     "ogImageAlt": "NF STUDIO — Logiciels métier sur mesure et automatisation. Schéma : e-mail entrant, extraction, validation humaine, logiciel métier."
   },
