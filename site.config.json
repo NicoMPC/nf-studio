@@ -1,0 +1,55 @@
+{
+  "siteUrl": "https://nicompc.github.io/nf-studio",
+  "lang": "fr",
+  "locale": "fr_FR",
+  "name": "NF STUDIO",
+  "founder": {
+    "name": "Nicolas Follézou",
+    "jobTitle": "Fondateur de NF STUDIO"
+  },
+  "contact": {
+    "email": "nicolas.follezou@hotmail.fr",
+    "phone": "07 46 79 43 03",
+    "phoneIntl": "+33746794303",
+    "linkedin": "https://www.linkedin.com/in/nicolas-foll%C3%A9zou-7b360312b/",
+    "mailSubject": "Projet — prise de contact NF STUDIO"
+  },
+  "seo": {
+    "home": {
+      "title": "NF STUDIO — Automatisation et outils métier sur mesure",
+      "description": "Studio indépendant de Nicolas Follézou : automatisation de processus métier, outils et applications internes sur mesure, intégration de l’IA, rédaction SEO."
+    },
+    "legal": {
+      "title": "Mentions légales et données personnelles — NF STUDIO",
+      "description": "Mentions légales du site NF STUDIO : éditeur, hébergeur, propriété intellectuelle et traitement des données personnelles. Aucun cookie, aucun traceur."
+    },
+    "organizationDescription": "Studio indépendant qui conçoit des outils métier sur mesure et automatise les processus des entreprises : automatisation, applications internes, connexion de logiciels, intégration de l’IA et contenus SEO.",
+    "services": [
+      "Automatisation de processus métier",
+      "Développement d’outils métier et d’applications internes sur mesure",
+      "Connexion et intégration de logiciels",
+      "Intégration de l’IA dans les processus",
+      "Rédaction de contenus SEO"
+    ],
+    "ogImageAlt": "NF STUDIO — Automatisation et outils métier sur mesure. Schéma : e-mail entrant, extraction, validation humaine, logiciel métier."
+  },
+  "legal": {
+    "legalName": "Nicolas FOLLEZOU",
+    "tradeName": "NF STUDIO",
+    "legalForm": "Entrepreneur individuel (EI)",
+    "siren": "837763713",
+    "siret": "83776371300059",
+    "address": "30 rue Lucie Aubrac, Appartement 2, 17137 L’Houmeau, France",
+    "ape": "62.01Z (Programmation informatique)",
+    "vatNumber": null,
+    "vatNote": "TVA non applicable, art. 293 B du CGI",
+    "registration": "Inscrit au Registre national des entreprises (RNE)",
+    "publicationDirector": "Nicolas Follézou",
+    "host": {
+      "name": "GitHub, Inc. (GitHub Pages)",
+      "address": "88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis",
+      "phone": null,
+      "url": "https://github.com"
+    }
+  }
+}

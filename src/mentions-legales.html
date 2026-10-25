@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+{{> head}}
+</head>
+<body id="top">
+{{> header}}
+<main id="contenu" tabindex="-1" class="legal-page">
+  <div class="wrap grid">
+    <p class="section-index"><span class="section-num">Annexe</span> Informations légales</p>
+    <div class="section-body legal">
+      <h1>Mentions légales</h1>
+      <p class="legal-lede">Informations relatives à l’éditeur du site {{siteName}}, à son hébergement et au traitement des données personnelles.</p>
+      {{{legalPendingNotice}}}
+
+      <nav class="legal-toc" aria-label="Sommaire">
+        <ol>
+          <li><a href="#editeur">Éditeur du site</a></li>
+          <li><a href="#hebergement">Hébergement</a></li>
+          <li><a href="#propriete">Propriété intellectuelle</a></li>
+          <li><a href="#donnees">Données personnelles</a></li>
+          <li><a href="#cookies">Cookies et mesure d’audience</a></li>
+        </ol>
+      </nav>
+
+      <section id="editeur" aria-labelledby="editeur-titre">
+        <h2 id="editeur-titre">Éditeur du site</h2>
+        <dl class="legal-dl">
+          <dt>Exploitant</dt><dd>{{{lg_legalName}}}</dd>
+          <dt>Nom commercial</dt><dd>{{{lg_tradeName}}}</dd>
+          <dt>Forme juridique</dt><dd>{{{lg_legalForm}}}</dd>
+          <dt>Adresse</dt><dd>{{{lg_address}}}</dd>
+          <dt>SIREN</dt><dd>{{{lg_siren}}}</dd>
+          <dt>SIRET</dt><dd>{{{lg_siret}}}</dd>
+          <dt>Code APE</dt><dd>{{{lg_ape}}}</dd>
+          <dt>Immatriculation</dt><dd>{{{lg_registration}}}</dd>
+          <dt>TVA</dt><dd>{{{lg_vat}}}</dd>
+          <dt>E-mail</dt><dd>{{{lg_email}}}</dd>
+          <dt>Téléphone</dt><dd>{{{lg_phone}}}</dd>
+          <dt>Directeur de la publication</dt><dd>{{{lg_publicationDirector}}}</dd>
+        </dl>
+      </section>
+
+      <section id="hebergement" aria-labelledby="hebergement-titre">
+        <h2 id="hebergement-titre">Hébergement</h2>
+        <dl class="legal-dl">
+          <dt>Hébergeur</dt><dd>{{{lg_hostName}}}</dd>
+          <dt>Adresse</dt><dd>{{{lg_hostAddress}}}</dd>
+          <dt>Téléphone / site</dt><dd>{{{lg_hostContact}}}</dd>
+        </dl>
+      </section>
+
+      <section id="propriete" aria-labelledby="propriete-titre">
+        <h2 id="propriete-titre">Propriété intellectuelle</h2>
+        <p>Les textes, schémas, éléments graphiques et la photographie présents sur ce site sont la propriété de leur auteur, sauf mention contraire. Toute reproduction ou réutilisation sans autorisation préalable est interdite.</p>
+        <p>Les polices de caractères Schibsted Grotesk et IBM Plex Mono sont distribuées sous licence SIL Open Font License 1.1 et hébergées avec le site.</p>
+      </section>
+
+      <section id="donnees" aria-labelledby="donnees-titre">
+        <h2 id="donnees-titre">Données personnelles</h2>
+        <h3>Ce que le site collecte</h3>
+        <p>Ce site ne comporte ni formulaire, ni compte utilisateur, ni outil de mesure d’audience, ni contenu tiers (vidéo, police ou script chargés depuis un autre serveur). Il ne collecte donc aucune donnée personnelle par lui-même.</p>
+        <p>Comme tout serveur web, l’hébergeur peut enregistrer des journaux techniques (adresse IP, date, page demandée, navigateur) nécessaires au fonctionnement et à la sécurité du service.</p>
+        <h3>Quand vous écrivez par e-mail</h3>
+        <p>Si vous prenez contact par e-mail, les informations que vous transmettez (nom, adresse e-mail, contenu du message) sont utilisées uniquement pour vous répondre et, le cas échéant, préparer et suivre une proposition. Elles ne sont ni cédées ni revendues.</p>
+        <ul>
+          <li><strong>Responsable du traitement&nbsp;:</strong> {{{lg_controller}}}.</li>
+          <li><strong>Finalité&nbsp;:</strong> répondre à votre demande et, le cas échéant, préparer et suivre une proposition.</li>
+          <li><strong>Base légale&nbsp;:</strong> intérêt légitime à répondre aux messages reçus, ou mesures précontractuelles prises à votre demande.</li>
+          <li><strong>Durée de conservation&nbsp;:</strong> le temps nécessaire au traitement de votre demande, puis au plus trois ans après le dernier échange en l’absence de relation contractuelle.</li>
+        </ul>
+        <h3>Vos droits</h3>
+        <p>Vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation et d’opposition sur vos données, ainsi que d’un droit à la portabilité. Pour les exercer, écrivez à&nbsp;: {{{lg_email}}}.</p>
+        <p>Si vous estimez, après m’avoir contacté, que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">cnil.fr/fr/plaintes<span class="visually-hidden"> (nouvel onglet)</span></a>).</p>
+      </section>
+
+      <section id="cookies" aria-labelledby="cookies-titre">
+        <h2 id="cookies-titre">Cookies et mesure d’audience</h2>
+        <p>Ce site ne dépose aucun cookie et n’utilise aucun traceur. Aucun bandeau de consentement n’est donc nécessaire.</p>
+      </section>
+
+      <p class="legal-updated">Dernière mise à jour&nbsp;: {{buildDate}}</p>
+    </div>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+{{> head}}
+</head>
+<body id="top">
+{{> header}}
+<main id="contenu" tabindex="-1">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="hero-titre">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="kicker">Studio indépendant · Automatisation &amp; outils métier</p>
+        <h1 id="hero-titre">Les bons outils. <span class="h1-line">Moins de tâches inutiles.</span></h1>
+        <div class="hero-body">
+        <p class="lede">NF STUDIO conçoit des outils métier sur mesure et automatise les processus qui ralentissent les entreprises. Du développement d’applications internes à l’intégration de l’IA, je transforme les problèmes opérationnels en solutions concrètes.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact">Parler de votre projet</a>
+          <a class="btn-link" href="#expertises">Découvrir les solutions <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="signature"><span class="signature-rule" aria-hidden="true"></span>{{founderName}} · Fondateur de NF STUDIO</p>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <svg class="flow flow-hero" viewBox="0 0 352 460" role="img" aria-labelledby="fig1-titre fig1-desc">
+          <title id="fig1-titre">Schéma d’un flux automatisé</title>
+          <desc id="fig1-desc">Un e-mail entrant est lu automatiquement, les informations utiles sont extraites, une personne les valide si nécessaire, puis elles arrivent dans le logiciel métier sans ressaisie.</desc>
+          <g class="fl-annot">
+            <text x="8" y="18">a · entrée</text>
+            <text x="8" y="138">b · règles / IA</text>
+            <text x="8" y="258" class="fl-annot-accent">c · humain</text>
+            <text x="8" y="378">d · sortie</text>
+          </g>
+
+          <g class="fl-node n1">
+            <rect x="8" y="28" width="268" height="64"/>
+            <text class="fl-label" x="24" y="55">E-MAIL ENTRANT</text>
+            <text class="fl-sub" x="24" y="77">demande + pièce jointe</text>
+          </g>
+          <g class="fl-node n2">
+            <rect x="8" y="148" width="268" height="64"/>
+            <text class="fl-label" x="24" y="175">EXTRACTION</text>
+            <text class="fl-sub" x="24" y="197">champs lus et structurés</text>
+          </g>
+          <g class="fl-node fl-node-accent n3">
+            <rect x="8" y="268" width="268" height="64"/>
+            <rect class="fl-flag" x="264" y="262" width="12" height="12"/>
+            <text class="fl-label" x="24" y="295">VALIDATION HUMAINE</text>
+            <text class="fl-sub" x="24" y="317">contrôle si nécessaire</text>
+          </g>
+          <g class="fl-node n4">
+            <rect x="8" y="388" width="268" height="64"/>
+            <text class="fl-label" x="24" y="415">LOGICIEL MÉTIER</text>
+            <text class="fl-sub" x="24" y="437">à jour, sans ressaisie</text>
+          </g>
+
+          <g class="fl-wire">
+            <path class="draw d1" pathLength="1" d="M142 92V144"/>
+            <path class="draw d2" pathLength="1" d="M142 212V264"/>
+            <path class="draw d3" pathLength="1" d="M142 332V384"/>
+          </g>
+          <g class="fl-head">
+            <path class="h1" d="M137 137l5 7 5-7"/>
+            <path class="h2" d="M137 257l5 7 5-7"/>
+            <path class="h3" d="M137 377l5 7 5-7"/>
+          </g>
+          <g class="fl-loop">
+            <path d="M276 312H316V180H282"/>
+            <path class="fl-loop-head" d="M289 175l-7 5 7 5"/>
+            <text x="332" y="246" transform="rotate(90 332 246)" text-anchor="middle">correction</text>
+          </g>
+        </svg>
+        <figcaption><span class="fig-num">fig. 01</span> Un flux type&nbsp;: du message entrant au logiciel métier, avec la main humaine là où elle compte.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== 01 CONSTAT ===== -->
+  <section class="section" id="constat" aria-labelledby="constat-titre">
+    <div class="wrap grid">
+      <p class="section-index"><span class="section-num">01/06</span> Le constat</p>
+      <div class="section-body">
+        <h2 id="constat-titre" class="h2-wide">Combien de temps perdez-vous à faire travailler vos logiciels les uns contre les autres&nbsp;?</h2>
+        <div class="constat-cols">
+          <p class="constat-intro">Quelques situations familières, dans beaucoup d’entreprises&nbsp;:</p>
+          <ol class="ruled-list">
+            <li>Ressaisir les mêmes informations dans plusieurs outils.</li>
+            <li>Copier-coller des données d’un logiciel à l’autre.</li>
+            <li>Produire à la main les mêmes rapports, chaque semaine.</li>
+            <li>Traiter une à une des demandes répétitives par e-mail.</li>
+            <li>Suivre l’activité dans des fichiers Excel dispersés.</li>
+            <li>Composer avec un logiciel standard qui ne colle pas à votre métier.</li>
+            <li>Réaliser à la main des tâches qui pourraient être automatisées.</li>
+          </ol>
+        </div>
+        <p class="conclusion">Pris un par un, ce sont de petits irritants. Additionnés, ils coûtent du temps, de l’argent et de l’énergie. <strong>Il existe souvent une manière plus simple de faire.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 02 EXPERTISES ===== -->
+  <section class="section" id="expertises" aria-labelledby="expertises-titre">
+    <div class="wrap grid">
+      <p class="section-index"><span class="section-num">02/06</span> Ce que je fais</p>
+      <div class="section-body">
+        <h2 id="expertises-titre">Automatiser les processus. Construire les outils qui manquent.</h2>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="expertises">
+        <article class="expertise">
+          <p class="expertise-num" aria-hidden="true">01</p>
+          <h3>Automatisation des processus</h3>
+          <p class="expertise-claim">Faire travailler les systèmes à votre place.</p>
+          <p>Je connecte vos outils et j’automatise les tâches répétitives pour réduire les manipulations manuelles et fluidifier vos opérations.</p>
+          <ul class="dash-list">
+            <li>Tâches administratives</li>
+            <li>Synchronisation de données entre logiciels</li>
+            <li>Traitement des formulaires et demandes entrantes</li>
+            <li>Génération automatique de documents et de rapports</li>
+            <li>Notifications, relances, workflows métier</li>
+            <li>Automatisations assistées par l’IA, quand elle apporte une réelle valeur</li>
+          </ul>
+        </article>
+        <article class="expertise">
+          <p class="expertise-num" aria-hidden="true">02</p>
+          <h3>Outils métier &amp; applications sur mesure</h3>
+          <p class="expertise-claim">Un outil adapté à votre métier. Pas l’inverse.</p>
+          <p>Quand les logiciels existants ne répondent pas exactement à votre besoin, je conçois des outils numériques ciblés pour simplifier votre activité.</p>
+          <ul class="dash-list">
+            <li>Applications web internes</li>
+            <li>Interfaces de gestion</li>
+            <li>Tableaux de bord opérationnels</li>
+            <li>Outils de calcul et de génération de documents</li>
+            <li>Portails et espaces clients</li>
+            <li>Prototypes et MVP</li>
+            <li>Petits logiciels spécialisés pour des métiers précis</li>
+          </ul>
+        </article>
+      </div>
+      <article class="expertise expertise-minor">
+        <div class="minor-head">
+          <p class="minor-tag"><span aria-hidden="true">03</span> En complément</p>
+          <h3>Visibilité organique &amp; contenu SEO</h3>
+          <p class="expertise-claim">Être trouvé par les bonnes personnes.</p>
+        </div>
+        <div class="minor-body">
+          <p>Je conçois des contenus utiles et structurés pour aider les entreprises à développer leur visibilité dans les moteurs de recherche.</p>
+          <ul class="inline-list">
+            <li>Recherche de mots-clés et d’intentions</li>
+            <li>Stratégie éditoriale</li>
+            <li>Rédaction de pages de services et d’articles SEO</li>
+            <li>Optimisation de contenus existants</li>
+            <li>Structuration des pages et maillage interne</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== 03 EXEMPLES ===== -->
+  <section class="section" id="exemples" aria-labelledby="exemples-titre">
+    <div class="wrap grid">
+      <p class="section-index"><span class="section-num">03/06</span> Exemples</p>
+      <div class="section-body">
+        <h2 id="exemples-titre">Avant, après. À quoi ça ressemble, concrètement.</h2>
+        <p class="section-intro">Quatre scénarios <strong>illustratifs</strong>, et non des références clients&nbsp;: ils montrent le type de problème que je traite et la forme que peut prendre la solution.</p>
+        <p class="legend" aria-hidden="true">
+          <span class="legend-item"><svg viewBox="0 0 14 14" width="14" height="14"><rect x="1" y="1" width="12" height="12"/></svg> outil, fichier</span>
+          <span class="legend-item"><svg viewBox="0 0 14 14" width="14" height="14"><circle cx="7" cy="7" r="6"/></svg> personne</span>
+          <span class="legend-item legend-accent"><svg viewBox="0 0 14 14" width="14" height="14"><circle cx="7" cy="7" r="6"/></svg> contrôle humain</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="wrap cases">
+      <!-- Cas 1 -->
+      <article class="case" aria-labelledby="cas1-titre">
+        <header class="case-head">
+          <p class="case-num">Cas 01</p>
+          <h3 id="cas1-titre">Automatiser la gestion administrative</h3>
+        </header>
+        <div class="case-ba">
+          <figure class="ba ba-before">
+            <p class="ba-tag">Avant</p>
+            <svg class="flow flow-mini" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
+              <rect class="m-node" x="10" y="20" width="66" height="32"/><text class="m-t" x="43" y="40">e-mail</text>
+              <rect class="m-node" x="222" y="20" width="68" height="32"/><text class="m-t" x="256" y="40">tableur</text>
+              <rect class="m-node" x="222" y="100" width="68" height="32"/><text class="m-t" x="256" y="120">logiciel</text>
+              <circle class="m-person" cx="148" cy="36" r="12"/>
+              <circle class="m-person" cx="148" cy="116" r="12"/>
+              <path class="m-wire" d="M76 36H136M160 36H222M240 52C220 90 120 70 136 112M160 116H222"/>
+              <path class="m-wire m-dash" d="M30 52C30 110 90 130 136 120"/>
+              <text class="m-s" x="148" y="70">copier-coller</text>
+              <text class="m-s" x="190" y="146">ressaisie</text>
+            </svg>
+            <figcaption>Les informations arrivent par e-mail, sont copiées dans un tableur, puis ressaisies dans un autre logiciel.</figcaption>
+          </figure>
+          <figure class="ba ba-after">
+            <p class="ba-tag">Après</p>
+            <svg class="flow flow-mini" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
+              <rect class="m-node" x="10" y="78" width="66" height="32"/><text class="m-t" x="43" y="98">e-mail</text>
+              <rect class="m-node" x="108" y="78" width="86" height="32"/><text class="m-t" x="151" y="98">extraction</text>
+              <rect class="m-node" x="222" y="78" width="68" height="32"/><text class="m-t" x="256" y="98">logiciel</text>
+              <path class="m-wire" d="M76 94H108M194 94H222"/>
+              <path class="m-head" d="M102 90l6 4-6 4M216 90l6 4-6 4"/>
+              <path class="m-wire m-accent m-dash" d="M206 94V48"/>
+              <circle class="m-person m-accent" cx="206" cy="36" r="12"/>
+              <text class="m-s m-s-accent m-s-start" x="224" y="40">contrôle</text>
+            </svg>
+            <figcaption>Elles sont récupérées, structurées et transmises automatiquement aux bons outils, avec un contrôle humain si nécessaire.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Cas 2 -->
+      <article class="case" aria-labelledby="cas2-titre">
+        <header class="case-head">
+          <p class="case-num">Cas 02</p>
+          <h3 id="cas2-titre">Créer un outil métier sur mesure</h3>
+        </header>
+        <div class="case-ba">
+          <figure class="ba ba-before">
+            <p class="ba-tag">Avant</p>
+            <svg class="flow flow-mini" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
+              <rect class="m-node" x="10" y="12" width="80" height="30"/><text class="m-t" x="50" y="31">suivi.xlsx</text>
+              <rect class="m-node" x="206" y="8" width="84" height="30"/><text class="m-t" x="248" y="27">devis.xlsx</text>
+              <rect class="m-node" x="18" y="108" width="80" height="30"/><text class="m-t" x="58" y="127">stock.xlsx</text>
+              <rect class="m-node" x="210" y="110" width="80" height="30"/><text class="m-t" x="250" y="129">procédure</text>
+              <circle class="m-person" cx="150" cy="76" r="12"/>
+              <path class="m-wire" d="M90 30C120 30 120 70 138 72M206 26C170 30 170 60 160 67M98 118C120 118 128 92 140 84M210 122C180 120 172 96 160 85"/>
+              <path class="m-wire m-dash" d="M47 42C60 100 230 40 248 110M248 38C230 90 80 70 59 108"/>
+            </svg>
+            <figcaption>L’activité tient dans plusieurs fichiers Excel et des procédures manuelles que chacun applique à sa façon.</figcaption>
+          </figure>
+          <figure class="ba ba-after">
+            <p class="ba-tag">Après</p>
+            <svg class="flow flow-mini" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
+              <circle class="m-person" cx="34" cy="76" r="12"/>
+              <rect class="m-node" x="92" y="32" width="128" height="88"/>
+              <path class="m-ui" d="M92 50H220M104 66H160M104 80H196M104 94H180M104 108H150"/>
+              <text class="m-t" x="156" y="45">interface unique</text>
+              <rect class="m-node" x="252" y="60" width="38" height="32"/><text class="m-t" x="271" y="80">BDD</text>
+              <path class="m-wire" d="M46 76H92M220 76H252"/>
+              <path class="m-head" d="M86 72l6 4-6 4"/>
+            </svg>
+            <figcaption>Une interface unique centralise les données et simplifie les opérations du quotidien.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Cas 3 -->
+      <article class="case" aria-labelledby="cas3-titre">
+        <header class="case-head">
+          <p class="case-num">Cas 03</p>
+          <h3 id="cas3-titre">Connecter les outils existants</h3>
+        </header>
+        <div class="case-ba">
+          <figure class="ba ba-before">
+            <p class="ba-tag">Avant</p>
+            <svg class="flow flow-mini" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
+              <rect class="m-node" x="10" y="24" width="80" height="32"/><text class="m-t" x="50" y="44">logiciel A</text>
+              <rect class="m-node" x="210" y="24" width="80" height="32"/><text class="m-t" x="250" y="44">logiciel B</text>
+              <path class="m-wire m-dash" d="M90 40H136M164 40H210"/>
+              <path class="m-cross" d="M144 34l12 12M156 34l-12 12"/>
+              <circle class="m-person" cx="150" cy="104" r="12"/>
+              <path class="m-wire" d="M50 56C50 96 110 104 138 104M250 56C250 96 190 104 162 104"/>
+              <text class="m-s" x="150" y="140">rapprochement manuel</text>
+            </svg>
+            <figcaption>Les logiciels communiquent mal&nbsp;; les équipes réconcilient les données à la main.</figcaption>
+          </figure>
+          <figure class="ba ba-after">
+            <p class="ba-tag">Après</p>
+            <svg class="flow flow-mini" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
+              <rect class="m-node" x="10" y="60" width="80" height="32"/><text class="m-t" x="50" y="80">logiciel A</text>
+              <rect class="m-node" x="122" y="62" width="56" height="28"/><text class="m-t" x="150" y="80">API</text>
+              <rect class="m-node" x="210" y="60" width="80" height="32"/><text class="m-t" x="250" y="80">logiciel B</text>
+              <path class="m-wire" d="M90 76H122M178 76H210"/>
+              <path class="m-head" d="M116 72l6 4-6 4M96 72l-6 4 6 4M204 72l6 4-6 4M184 72l-6 4 6 4"/>
+              <text class="m-s" x="150" y="118">connecteur · workflow</text>
+            </svg>
+            <figcaption>Les échanges sont automatisés via des API, des connecteurs ou des workflows adaptés.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Cas 4 -->
+      <article class="case" aria-labelledby="cas4-titre">
+        <header class="case-head">
+          <p class="case-num">Cas 04</p>
+          <h3 id="cas4-titre">Exploiter l’IA dans un processus</h3>
+        </header>
+        <div class="case-ba">
+          <figure class="ba ba-before">
+            <p class="ba-tag">Avant</p>
+            <svg class="flow flow-mini" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
+              <g class="m-stack">
+                <rect class="m-node" x="10" y="14" width="40" height="22"/>
+                <rect class="m-node" x="10" y="40" width="40" height="22"/>
+                <rect class="m-node" x="10" y="66" width="40" height="22"/>
+                <rect class="m-node" x="10" y="92" width="40" height="22"/>
+                <rect class="m-node" x="10" y="118" width="40" height="22"/>
+              </g>
+              <circle class="m-person" cx="170" cy="76" r="12"/>
+              <path class="m-wire" d="M50 25C110 25 120 70 158 72M50 51C100 51 120 72 158 74M50 77H158M50 103C100 103 120 80 158 78M50 129C110 129 120 82 158 80"/>
+              <rect class="m-node" x="222" y="60" width="68" height="32"/><text class="m-t" x="256" y="80">décision</text>
+              <path class="m-wire" d="M182 76H222"/>
+              <text class="m-s" x="210" y="112">lire · trier · résumer</text>
+            </svg>
+            <figcaption>Un grand volume de documents ou de demandes à lire, trier et résumer à la main.</figcaption>
+          </figure>
+          <figure class="ba ba-after">
+            <p class="ba-tag">Après</p>
+            <svg class="flow flow-mini" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
+              <g class="m-stack">
+                <rect class="m-node" x="4" y="54" width="32" height="20"/>
+                <rect class="m-node" x="8" y="62" width="32" height="20"/>
+                <rect class="m-node" x="12" y="70" width="32" height="20"/>
+              </g>
+              <rect class="m-node" x="60" y="50" width="124" height="52"/>
+              <text class="m-t" x="122" y="72">IA</text>
+              <text class="m-s" x="122" y="90">trier · extraire</text>
+              <circle class="m-person m-accent" cx="212" cy="76" r="12"/>
+              <rect class="m-node" x="232" y="62" width="66" height="28"/><text class="m-t" x="265" y="80">décision</text>
+              <path class="m-wire" d="M44 80H60M184 76H200M224 76H232"/>
+              <path class="m-head" d="M54 76l6 4-6 4M194 72l6 4-6 4M226 72l6 4-6 4"/>
+              <text class="m-s m-s-accent" x="212" y="112">validation</text>
+            </svg>
+            <figcaption>L’IA prépare la classification, l’extraction ou le résumé&nbsp;; une personne valide les décisions importantes.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== 04 METHODE ===== -->
+  <section class="section" id="methode" aria-labelledby="methode-titre">
+    <div class="wrap grid">
+      <p class="section-index"><span class="section-num">04/06</span> Méthode</p>
+      <div class="section-body">
+        <h2 id="methode-titre">Du problème à la solution. Sans complexité inutile.</h2>
+      </div>
+    </div>
+    <div class="wrap">
+      <ol class="steps">
+        <li class="step">
+          <p class="step-num" aria-hidden="true">Étape 1</p>
+          <h3>Comprendre</h3>
+          <p>Votre besoin, vos contraintes, et la façon dont le travail se fait réellement aujourd’hui.</p>
+        </li>
+        <li class="step">
+          <p class="step-num" aria-hidden="true">Étape 2</p>
+          <h3>Cadrer</h3>
+          <p>Choisir la solution pertinente et fixer un périmètre clair.</p>
+        </li>
+        <li class="step">
+          <p class="step-num" aria-hidden="true">Étape 3</p>
+          <h3>Construire</h3>
+          <p>Développer, intégrer à vos outils existants, tester.</p>
+        </li>
+        <li class="step">
+          <p class="step-num" aria-hidden="true">Étape 4</p>
+          <h3>Améliorer</h3>
+          <p>Ajuster à l’usage, documenter, automatiser davantage si c’est utile.</p>
+        </li>
+      </ol>
+      <p class="method-note">Parfois, une automatisation simple suffit. Parfois, un vrai outil métier est préférable. <span class="accent-text">Mon travail&nbsp;: trouver la bonne réponse, pas vendre la plus sophistiquée.</span></p>
+    </div>
+  </section>
+
+  <!-- ===== 05 A PROPOS ===== -->
+  <section class="section" id="a-propos" aria-labelledby="apropos-titre">
+    <div class="wrap grid">
+      <p class="section-index"><span class="section-num">05/06</span> À propos</p>
+      <div class="section-body about">
+        <figure class="portrait">
+          <picture>
+            <source type="image/webp" srcset="assets/img/nicolas-follezou-320.webp 320w, assets/img/nicolas-follezou-448.webp 448w, assets/img/nicolas-follezou-512.webp 512w" sizes="(min-width: 760px) 320px, min(360px, calc(100vw - 32px))">
+            <img src="assets/img/nicolas-follezou-448.jpg" srcset="assets/img/nicolas-follezou-320.jpg 320w, assets/img/nicolas-follezou-448.jpg 448w, assets/img/nicolas-follezou-512.jpg 512w" sizes="(min-width: 760px) 320px, min(360px, calc(100vw - 32px))" width="512" height="640" loading="lazy" decoding="async" alt="Portrait de Nicolas Follézou, fondateur de NF STUDIO">
+          </picture>
+          <figcaption><span class="fig-num">fig. 02</span> {{founderName}}</figcaption>
+        </figure>
+        <div class="about-text">
+          <h2 id="apropos-titre">Un interlocuteur direct, de l’idée à la mise en œuvre.</h2>
+          <p>Je suis Nicolas Follézou, entrepreneur, avec une formation d’ingénieur. J’aime comprendre comment fonctionne une activité, repérer ce qui peut être simplifié, puis construire ce qui manque.</p>
+          <p>Avec NF STUDIO, je travaille sur des problèmes concrets&nbsp;: automatiser des opérations, concevoir des outils métier, développer des applications internes adaptées à la façon dont une équipe travaille vraiment.</p>
+          <p>Mon approche&nbsp;: comprendre avant de construire, aller à l’essentiel, et privilégier les solutions qui apportent une vraie valeur. Vous parlez directement à la personne qui conçoit et réalise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 06 CONTACT ===== -->
+  <section class="section section-contact" id="contact" aria-labelledby="contact-titre">
+    <div class="wrap grid">
+      <p class="section-index"><span class="section-num">06/06</span> Contact</p>
+      <div class="section-body">
+        <h2 id="contact-titre" class="h2-wide">Vous avez un processus à simplifier ou une idée à concrétiser&nbsp;?</h2>
+        <p class="contact-text">Décrivez-moi votre besoin, même à grands traits. On regardera ensemble ce qui peut être amélioré et quelle solution serait pertinente.</p>
+        {{{contactBlock}}}
+      </div>
+    </div>
+  </section>
+</main>
+{{> footer}}
+</body>
+</html>

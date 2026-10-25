@@ -1,0 +1,6 @@
+# Généré par npm run build (reconstruit par la CI)
+dist/
+node_modules/
+# Notes de travail internes, gardées en local
+docs/
+_suivi/
