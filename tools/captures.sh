@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Captures pleine page avec Chrome headless (serveur local requis : node serve.mjs 8765).
-# Usage : tools/captures.sh [port]
+# Usage : tools/captures.sh [port]  (état final statique : prefers-reduced-motion forcé ; le cycle animé est capturé à part)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PORT=${1:-8765}
@@ -9,7 +9,7 @@ mkdir -p "$OUT"
 shot() { # nom largeur hauteur_max url
   local name=$1 w=$2 h=$3 url=$4 tmp
   tmp=$(mktemp --suffix=.png)
-  google-chrome --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 \
+  google-chrome --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --force-prefers-reduced-motion \
     --virtual-time-budget=4000 --window-size="$w,$h" --screenshot="$tmp" "$url" >/dev/null 2>&1
   # recadre sous le footer (fond papier uni en bas de la fenêtre géante)
   local geo bottom

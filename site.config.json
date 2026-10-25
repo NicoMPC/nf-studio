@@ -5,7 +5,8 @@
   "name": "NF STUDIO",
   "founder": {
     "name": "Nicolas Follézou",
-    "jobTitle": "Fondateur de NF STUDIO"
+    "jobTitle": "Fondateur de NF STUDIO",
+    "description": "Fondateur de NF STUDIO, ancien responsable de projet chez Arianespace."
   },
   "contact": {
     "email": "nicolas.follezou@hotmail.fr",
@@ -16,22 +17,22 @@
   },
   "seo": {
     "home": {
-      "title": "NF STUDIO — Automatisation et outils métier sur mesure",
-      "description": "Studio indépendant de Nicolas Follézou : automatisation de processus métier, outils et applications internes sur mesure, intégration de l’IA, rédaction SEO."
+      "title": "NF STUDIO — Logiciels métier sur mesure et automatisation",
+      "description": "Logiciels métier sur mesure et automatisation : un outil conçu pour votre activité, qui se déploie d’une agence à tout un réseau ou une franchise."
     },
     "legal": {
       "title": "Mentions légales et données personnelles — NF STUDIO",
       "description": "Mentions légales du site NF STUDIO : éditeur, hébergeur, propriété intellectuelle et traitement des données personnelles. Aucun cookie, aucun traceur."
     },
-    "organizationDescription": "Studio indépendant qui conçoit des outils métier sur mesure et automatise les processus des entreprises : automatisation, applications internes, connexion de logiciels, intégration de l’IA et contenus SEO.",
+    "organizationDescription": "Studio indépendant qui conçoit des logiciels métier sur mesure, déployables d’une agence à tout un réseau, et automatise les tâches répétitives des entreprises : connexion de logiciels, intégration de l’IA avec validation humaine.",
     "services": [
+      "Développement de logiciels métier sur mesure",
+      "Applications web internes et portails clients",
+      "Déploiement multi-sites et réseaux de franchise",
       "Automatisation de processus métier",
-      "Développement d’outils métier et d’applications internes sur mesure",
-      "Connexion et intégration de logiciels",
-      "Intégration de l’IA dans les processus",
-      "Rédaction de contenus SEO"
+      "Connexion de logiciels (API) et intégration de l’IA"
     ],
-    "ogImageAlt": "NF STUDIO — Automatisation et outils métier sur mesure. Schéma : e-mail entrant, extraction, validation humaine, logiciel métier."
+    "ogImageAlt": "NF STUDIO — Logiciels métier sur mesure et automatisation. Schéma : e-mail entrant, extraction, validation humaine, logiciel métier."
   },
   "legal": {
     "legalName": "Nicolas FOLLEZOU",

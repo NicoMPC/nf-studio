@@ -68,6 +68,30 @@ function minifyCss(css) {
     .trim() + '\n';
 }
 
+// Minification JS prudente (sans dépendance) : commentaires et espaces hors chaînes.
+// Hypothèses : pas de littéral regex, instructions terminées par « ; ». Le résultat est vérifié par node --check.
+function minifyJs(src) {
+  let out = '', i = 0, q = null, pend = false;
+  const id = (c) => /[A-Za-z0-9_$]/.test(c || '');
+  while (i < src.length) {
+    const c = src[i];
+    if (q) { // dans une chaîne ou un gabarit
+      out += c;
+      if (c === '\\') { out += src[i + 1]; i += 2; continue; }
+      if (c === q) q = null;
+      i++; continue;
+    }
+    if (c === '/' && src[i + 1] === '/') { while (i < src.length && src[i] !== '\n') i++; pend = true; continue; }
+    if (c === '/' && src[i + 1] === '*') { i = src.indexOf('*/', i + 2) + 2; pend = true; continue; }
+    if (/\s/.test(c)) { pend = true; i++; continue; }
+    if (pend && id(out[out.length - 1]) && id(c)) out += ' ';
+    pend = false;
+    if (c === '"' || c === "'" || c === '`') q = c;
+    out += c; i++;
+  }
+  return out + '\n';
+}
+
 function validEmail(e) {
   return /^[^\s@<>"']+@[^\s@<>"']+\.[a-z]{2,}$/i.test(e);
 }
@@ -107,12 +131,10 @@ async function main() {
     contactBlock = `<div class="contact-actions">
           <a class="btn btn-large" href="${esc(mailto)}">Parlons-en <span aria-hidden="true">→</span></a>
           <p class="contact-direct"><span class="mono-label">E-mail</span> <a class="contact-email" href="mailto:${esc(email)}">${esc(email)}</a></p>
-          ${isSet(linkedin) ? `<p class="contact-direct"><span class="mono-label">LinkedIn</span> ${extLink(linkedin, `Profil de ${esc(config.founder.name)}`, 'me noopener')}</p>` : ''}
         </div>`;
   } else {
     contactBlock = `<div class="contact-actions">
           <p class="contact-pending" data-todo="contact.email"><span class="mono-label">E-mail</span> Adresse de contact bientôt en ligne.</p>
-          ${isSet(linkedin) ? `<p class="contact-direct"><span class="mono-label">LinkedIn</span> ${extLink(linkedin, `Profil de ${esc(config.founder.name)}`, 'me noopener')}</p>` : ''}
         </div>`;
   }
   const footerLinkedin = isSet(linkedin) ? `<li>${linkedinLink}</li>` : '';
@@ -186,6 +208,7 @@ async function main() {
     '@id': personId,
     name: config.founder.name,
     jobTitle: config.founder.jobTitle,
+    ...(isSet(config.founder.description) ? { description: config.founder.description } : {}),
     image: abs('assets/img/nicolas-follezou-512.jpg'),
     worksFor: { '@id': orgId },
   };
@@ -221,8 +244,11 @@ async function main() {
   const cssSrc = await readFile(path.join(SRC, 'assets/css/style.css'), 'utf8');
   const cssMin = process.env.NO_MINIFY ? cssSrc : minifyCss(cssSrc);
   const cssHref = `assets/css/style.${hash(cssMin)}.css`;
-  const jsSrc = await readFile(path.join(SRC, 'assets/js/menu.js'), 'utf8');
+  const jsSrc = minifyJs(await readFile(path.join(SRC, 'assets/js/menu.js'), 'utf8'));
   const jsHref = `assets/js/menu.${hash(jsSrc)}.js`;
+  const animSrc = minifyJs(await readFile(path.join(SRC, 'assets/js/anim.js'), 'utf8'));
+  const animHref = `assets/js/anim.${hash(animSrc)}.js`;
+  if (Buffer.byteLength(animSrc) > 6000) warn(`anim.js dépasse 6 000 octets (${Buffer.byteLength(animSrc)} o)`);
 
   // --- Contexte commun
   const now = new Date();
@@ -238,11 +264,11 @@ async function main() {
   const pages = [
     {
       src: 'index.html', out: 'index.html', url: `${siteUrl}/`,
-      ctx: { pageTitle: config.seo.home.title, pageDescription: config.seo.home.description, canonical: `${siteUrl}/`, jsonLd: jsonLdHome, homeHref: '', logoHref: '#top' },
+      ctx: { pageTitle: config.seo.home.title, pageDescription: config.seo.home.description, canonical: `${siteUrl}/`, jsonLd: jsonLdHome, homeHref: '', logoHref: '#top', animScript: `<script src="${animHref}" defer></script>` },
     },
     {
       src: 'mentions-legales.html', out: 'mentions-legales.html', url: abs('mentions-legales.html'),
-      ctx: { pageTitle: config.seo.legal.title, pageDescription: config.seo.legal.description, canonical: abs('mentions-legales.html'), jsonLd: jsonLdLegal, homeHref: 'index.html', logoHref: 'index.html' },
+      ctx: { pageTitle: config.seo.legal.title, pageDescription: config.seo.legal.description, canonical: abs('mentions-legales.html'), jsonLd: jsonLdLegal, homeHref: 'index.html', logoHref: 'index.html', animScript: '' },
     },
   ];
 
@@ -252,6 +278,8 @@ async function main() {
   await cp(path.join(SRC, 'assets'), path.join(DIST, 'assets'), { recursive: true });
   await rm(path.join(DIST, 'assets/css/style.css'));
   await rm(path.join(DIST, 'assets/js/menu.js'));
+  await rm(path.join(DIST, 'assets/js/anim.js'));
+  await writeFile(path.join(DIST, animHref), animSrc);
   await writeFile(path.join(DIST, cssHref), cssMin);
   await writeFile(path.join(DIST, jsHref), jsSrc);
   const inlineHashes = new Set();
